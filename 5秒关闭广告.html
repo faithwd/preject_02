@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <button>点击停止爆发</button>
+    <img src="./img/g.jpg" alt="" class="ad">
+    <script>
+        var ad = document.querySelector('.ad');
+        setTimeout(function() {
+            ad.style.display = 'none'
+        }, 5000);
+
+        // 清除定时器
+        var bt = document.querySelector('button');
+        var timer = setTimeout(function() {
+            console.log('爆炸');
+        }, 5000);
+
+        bt.addEventListener('click', function() {
+            clearTimeout(timer);
+
+        })
+    </script>
+</body>
+
+</html>

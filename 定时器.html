@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        // setTimeout()定时器
+        // window.setTimeout(调用函数，延迟时间)
+        // 延迟时间单位是毫秒，但可以省略，如果默认是0
+        // 这个调用函数可以直接写函数，含可以写函数名
+        // 页面中有很多定时器，我么经常给定时器加标识符
+        setTimeout(function() {
+            console.log('时间到了');
+        }, 2000);
+
+        function callBack() {
+            console.log('爆炸');
+        }
+        setTimeout(callBack, 1000);
+
+        var time1 = setTimeout(callBack, 1000);
+        var timee2 = setTimeout(callBack, 2000);
+    </script>
+</body>
+
+</html>
